@@ -1,0 +1,84 @@
+{
+  "name": "ds-workshop-storybook-boilerplate",
+  "version": "0.1.0",
+  "description": "Styled-components library setup (copied from React Components used at @Coderbox)",
+  "main": "lib/my-awesome-library.js",
+  "scripts": {
+    "prepare": "yarn build",
+    "build": "webpack --env production",
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "demo": "webpack-dev-server --config webpack.demo.config.js --content-base build --history-api-fallback",
+    "flow": "flow",
+    "create-component": "./node_modules/add-component/index.js --no-index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varya/styled-components-lib-setup.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "styled-components"
+  ],
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "globals": [],
+    "ignore": [
+      "node_modules/**",
+      "lib/**"
+    ],
+    "parser": "babel-eslint"
+  },
+  "author": "Varya Stepanova <mail@varya.me>",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-console": "^1.0.0",
+    "@storybook/addon-info": "^3.3.13",
+    "@storybook/addons": "^3.3.13",
+    "@storybook/react": "3.2.17",
+    "@storybook/storybook-deployer": "^2.0.0",
+    "add-component": "^2.5.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-styled-components": "^1.1.7",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "flow-bin": "^0.54.1",
+    "img-loader": "^2.0.1",
+    "loki": "0.9.1",
+    "standard": "^10.0.3",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-node-externals": "^1.6.0",
+    "yargs": "^8.0.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
+    "react": "^16.x.x",
+    "react-dom": "^16.x.x",
+    "react-router-dom": "^4.2.2",
+    "recompose": "^0.25.0",
+    "styled-components": "^2.1.2",
+    "styled-utils": "^1.2.4"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false,
+        "fitWindow": false
+      }
+    }
+  }
+}
